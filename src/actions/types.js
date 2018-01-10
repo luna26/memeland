@@ -1,0 +1,1 @@
+export const MENU_CHANGED = 'menu_changed';

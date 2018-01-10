@@ -15,10 +15,10 @@ const Button = ({onPress, children}) => {
 const styles = {
     buttonStyle:{
         backgroundColor: '#3ADF00',
-        padding: 15,
+        padding: 18,
         borderRadius:50,
-        marginLeft:15,
-        marginRight:15
+        marginLeft:25,
+        marginRight:25
     },
     buttonText:{
         color: '#FFFFFF',

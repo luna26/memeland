@@ -18,8 +18,7 @@ const Field = ({textBtn}) =>{
 const styles = {
     containerStyle:{
         marginLeft:15,
-        marginRight:15,
-        marginTop: 30
+        marginRight:15
     },
     textInputStyle:{
         backgroundColor:'#FFFFFF',

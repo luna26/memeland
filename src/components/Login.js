@@ -4,16 +4,18 @@ import  {Button, Field} from './common/';
 
 class Login extends Component{
     render(){
-        const {styleContainer, styleBtn} = styles;
+        const {styleContainer, styleContainerForm, styleBtn, styleRegisterText, styleRegisterTextContainer} = styles;
         return(
             <View style={styleContainer}>
-                <View>
+                <View style={styleContainerForm}>
                     <Field textBtn={'Username:'}/>
                     <Field textBtn={'Password:'}/>
+                    <View style={styleRegisterTextContainer}>
+                        <Text style={styleRegisterText}>Register</Text>
+                    </View>
                 </View>
-                <Text>Register</Text>
                 <View style={styleBtn} >
-                    <Button>
+                    <Button style={{height:80}}>
                         LOGIN
                     </Button>
                 </View>
@@ -26,10 +28,22 @@ const styles = {
     styleContainer:{
         flex:1,
     },
+    styleContainerForm:{
+        paddingTop:30,
+        flex:5
+    },
+    styleRegisterTextContainer:{
+        alignItems:'center', 
+        marginTop:50
+    },
+    styleRegisterText:{
+        borderBottomColor: '#47315a',
+        borderBottomWidth: 1,
+    },
     styleBtn:{
-        justifyContent: 'flex-end', 
         flex:1,
-        marginBottom:15
+        justifyContent: 'flex-end', 
+        paddingBottom:30
     }
 }
 
