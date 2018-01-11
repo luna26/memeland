@@ -6,12 +6,17 @@ import SideMenu from 'react-native-side-menu';
 import MenuList from './MenuList';
 
 class MenuPanel extends Component {
+    checkOpenMenu(isOpen){
+        if(!isOpen){
+            this.props.openMenu(false);
+        }
+    }
     render() {
         return (
             <SideMenu
                 menu={<MenuList />}
                 isOpen={this.props.mainMenuOpen}
-                onChange={(isOpen) => this.props.openMenu(isOpen)}
+                onChange={(isOpen) => this.checkOpenMenu(isOpen)}
             >
                 <Router />
             </SideMenu>
