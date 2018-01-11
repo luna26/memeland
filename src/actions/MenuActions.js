@@ -13,6 +13,9 @@ export const selectMenu = (param) =>{
         case 0:
             Actions.memeGenerator();
         break;
+        case 1:
+            Actions.folderPage();
+        break;
     }
     return {
         type: MENU_SELECT,

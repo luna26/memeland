@@ -3,6 +3,11 @@
         "id": 0,
         "title": "Meme Generator",
         "desc": "Authentication using the Finger Print sensor in your Android Device"
+    },
+    {
+        "id": 1,
+        "title": "Folders",
+        "desc": "Authentication using the Finger Print sensor in your Android Device"
     }
     
 ]

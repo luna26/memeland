@@ -7,7 +7,7 @@ import {MenuButton} from './components/common/';
 
 import Login from './components/Login';
 import AssetsPage from './components/AssetsPage';
-import MemeGenerator from './components/MemeGenerator';
+import MemeGeneratorSource from './components/MemeGeneratorSource';
 
 const RouterComponent = ({openMenu}) => {
     const {homeNavigationTitleImage,navigationBarStyle} = styles;
@@ -15,8 +15,8 @@ const RouterComponent = ({openMenu}) => {
         <Router>
             <Stack key='root'>
                 <Scene key='login' component={Login} title='' navigationBarStyle={navigationBarStyle} navigationBarTitleImageStyle={homeNavigationTitleImage} navigationBarTitleImage={require('./images/iconMemeland.png')} />
-                <Scene key='assetsPage' left={<MenuButton onPress={() =>openMenu(true)}/>} component={AssetsPage} navigationBarStyle={navigationBarStyle} navigationBarTitleImageStyle={homeNavigationTitleImage} navigationBarTitleImage={require('./images/iconMemeland.png')} initial />
-                <Scene key='memeGenerator' left={<MenuButton onPress={() =>openMenu(true)}/>} component={MemeGenerator} navigationBarStyle={navigationBarStyle} navigationBarTitleImageStyle={homeNavigationTitleImage} navigationBarTitleImage={require('./images/iconMemeland.png')} />
+                <Scene key='folderPage' left={<MenuButton onPress={() =>openMenu(true)}/>} component={AssetsPage} navigationBarStyle={navigationBarStyle} navigationBarTitleImageStyle={homeNavigationTitleImage} navigationBarTitleImage={require('./images/iconMemeland.png')} />
+                <Scene key='memeGenerator' left={<MenuButton onPress={() =>openMenu(true)}/>} component={MemeGeneratorSource} navigationBarStyle={navigationBarStyle} navigationBarTitleImageStyle={homeNavigationTitleImage} navigationBarTitleImage={require('./images/iconMemeland.png')} initial />
             </Stack>
         </Router>
     );
