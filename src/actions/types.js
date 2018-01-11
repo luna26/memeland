@@ -1,1 +1,2 @@
-export const MENU_CHANGED = 'menu_changed';
+export const MENU_CHANGED = 'menu_open';
+export const MENU_SELECT = 'menu_select';
