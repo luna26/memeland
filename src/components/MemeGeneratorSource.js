@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
 import { Button } from './common/';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class MemeGeneratorSource extends Component {
     render() {
@@ -11,7 +13,7 @@ class MemeGeneratorSource extends Component {
                     <Image source={require('../images/mmgSource.png')} />
                 </View>
                 <View style={containerBtns}>
-                    <Button>Camera</Button>
+                    <Button onPress={() => this.props.selectMenuSource(0)}>Camera</Button>
                     <Button>Popular</Button>
                     <Button>My Assets</Button>
                 </View>
@@ -33,4 +35,10 @@ const styles = {
     }
 }
 
-export default MemeGeneratorSource;
+const mapStateToProps = state => {
+    return {
+        mainMenuData: state.mainMenuData
+    };
+};
+
+export default connect(mapStateToProps, actions)(MemeGeneratorSource);

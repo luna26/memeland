@@ -2,7 +2,6 @@ import { Actions } from 'react-native-router-flux';
 import { MENU_CHANGED, MENU_SELECT } from './types';
 
 export const openMenu = (param) => {
-    console.log(param, 'action');
     return {
         type: MENU_CHANGED,
         payload: param
